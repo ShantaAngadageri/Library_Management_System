@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library - Home</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="home-container">
+    <div class="home-header">
+      <h1>Welcome to Our Library</h1>
+      <a href="/login" class="login-button">Login</a>
+    </div>
+    <p class="home-description">Discover our collection of books and start your reading journey today.</p>
+    
+    <div class="books-grid">
+      <% books.forEach(book => { %>
+        <div class="book-card">
+          <div class="book-info">
+            <div class="book-title"><%= book.title %></div>
+            <div class="book-author">by <%= book.author %></div>
+          </div>
+          <% if (book.filePath) { %>
+            <a href="/view/<%= book._id %>" class="view-button" target="_blank">Read Book</a>
+          <% } %>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html> 

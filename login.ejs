@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <form action="/login" method="POST" class="add-book-form">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+      </div>
+      <div class="form-buttons">
+        <button type="submit" class="submit-button">Login</button>
+      </div>
+      <div style="margin-top: 1rem;">
+        <a href="/signup" class="view-button">Create an Account</a>
+        <a href="/forgot" class="view-button">Forgot Password?</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
